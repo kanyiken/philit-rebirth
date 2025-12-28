@@ -3,7 +3,7 @@
 
 // Toggle between environments with a single variable when testing: set PIPII_ENV=local.
 // Everything else is pre-wired below for convenience.
-const APP_ENV = 'prod'; // default
+const APP_ENV = 'local'; // default
 
 function environment(): string
 {
@@ -19,9 +19,9 @@ $CONFIG = [
     ],
     'local' => [
         'db_host' => getenv('PIPII_DB_HOST') ?: 'localhost',
-        'db_name' => getenv('PIPII_DB_NAME') ?: 'pipii_local',
-        'db_user' => getenv('PIPII_DB_USER') ?: 'pipii_local_user',
-        'db_pass' => getenv('PIPII_DB_PASS') ?: 'local_only_change_me',
+        'db_name' => getenv('PIPII_DB_NAME') ?: 'pipii',
+        'db_user' => getenv('PIPII_DB_USER') ?: 'root',
+        'db_pass' => getenv('PIPII_DB_PASS') ?: 'root',
     ],
 ];
 
